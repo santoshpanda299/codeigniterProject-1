@@ -29,3 +29,14 @@ a:hover.back-to-top {
   height: auto;
   background-color: #f5f5f5;
 }
+.row.vdivide [class*='login-register']:not(:last-child):after {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;
+}

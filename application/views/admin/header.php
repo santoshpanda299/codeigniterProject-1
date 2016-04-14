@@ -34,7 +34,11 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Logout</a></li>
+      <?php if($this->session->userdata('userid')): ?>
+       <li><a href="#"><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Logout</a></li>
+        <?php else: ?>
+        <li><a href="<?php echo base_url('admin/login') ?>"><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Sign In/Sign Up</a></li>
+      <?php endif; ?>
       </ul>
     </div>
   </div>

@@ -11,7 +11,7 @@ $config = [
  								[
  									 'field' => 'password',
                                      'label' => 'Password',
-                                     'rules' => 'required|min_length[6]'
+                                     'rules' => 'trim|required|min_length[6]'
  								],
  						]
 
