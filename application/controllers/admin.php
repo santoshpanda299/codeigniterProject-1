@@ -23,10 +23,10 @@ class Admin extends MY_Controller
     if(!$this->session->userdata('userid')){
         redirect('admin/index');
      }
-      $session_id = $this->session->userdata('userid');
-      //$data = $this->model->getAllRecords($session_id);
-      //$this->load->view('admin/admin_dashboard',$data);
-      $this->load->view('admin/admin_dashboard');
+      $userid = $this->session->userdata('userid');
+      $data = $this->admin->getAllRecords($userid);
+      $this->load->view('admin/admin_dashboard',$data);
+      
     }
   
   public function login(){
